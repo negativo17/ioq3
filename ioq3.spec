@@ -10,12 +10,12 @@
 # And then you can skip directory creation in the install section and just use
 # the "make copyfiles" target."
 
-%global commit0 558da2527725fff521bbd3a6d341c606d395d92a
+%global commit0 360ec03238edb2a3feccbc0106695bfd90dd1353
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 
 Name:           ioq3
 Version:        1.36
-Release:        32.%{?shortcommit0}%{?dist}
+Release:        33.%{?shortcommit0}%{?dist}
 Summary:        Icculus.org Quake III Arena engine
 License:        GPLv2+
 URL:            http://ioquake3.org/
@@ -103,6 +103,9 @@ fi
 %{_datadir}/quake3
 
 %changelog
+* Mon Jun 13 2016 Simone Caronni <negativo17@gmail.com> - 1.36-33.360ec03
+- Update to latest sources.
+
 * Mon Jan 25 2016 Simone Caronni <negativo17@gmail.com> - 1.36-32.558da25
 - Update to latest snapshot.
 - Update SPEC file to latest packaging guidelines.
