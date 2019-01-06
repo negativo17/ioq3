@@ -59,11 +59,11 @@ security for servers and clients from various bug fixes which are not in ID’s
 client.
 
 %prep
-%setup -qn %{name}-%{commit0}
+%autosetup -n %{name}-%{commit0}
 rm -fr code/{AL,jpeg-8c,libcurl*,libogg*,libspeex*,libvorbis*,SDL2,opus*}
 
 %build
-make %{?_smp_mflags} \
+%make_build \
     BUILD_BASEGAME=1 \
     BUILD_CLIENT_SMP=1 \
     BUILD_GAME_SO=0 \
@@ -79,8 +79,7 @@ make %{?_smp_mflags} \
     USE_INTERNAL_LIBS=0 \
     USE_OPENAL=1 \
     USE_RENDERER_DLOPEN=0 \
-    USE_VOIP=1 \
-    V=1
+    USE_VOIP=1
 
 %install
 mkdir -p %{buildroot}%{_bindir}
