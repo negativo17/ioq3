@@ -34,6 +34,7 @@ BuildRequires:  libXt-devel
 BuildRequires:  libcurl-devel
 BuildRequires:  libjpeg-turbo-devel
 BuildRequires:  libvorbis-devel
+BuildRequires:  mesa-libGL-devel
 BuildRequires:  openal-soft-devel
 BuildRequires:  opusfile-devel
 BuildRequires:  SDL2-devel
