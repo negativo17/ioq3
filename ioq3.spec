@@ -1,5 +1,5 @@
 # To avoid shared objects in the data directory, you need to disable shared
-# object usage completely with the following flags:
+# object usage completely that is enabled with the following flags:
 #
 #   BUILD_GAME_SO=1 (default)
 #   BUILD_GAME_QVM=1 (default)
@@ -10,13 +10,13 @@
 # And then you can skip directory creation in the install section and just use
 # the "make copyfiles" target."
 
-%global commit0 f2c61c14c4ee3d79907cdac5251706c2f96a4901
-%global date 20200211
+%global commit0 d1b7ab6b22cc99205ac890910e286859e30df40e
+%global date 20201117
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 
 Name:           ioq3
 Version:        1.36
-Release:        37%{?shortcommit0:.%{date}git%{shortcommit0}}%{?dist}
+Release:        38%{?shortcommit0:.%{date}git%{shortcommit0}}%{?dist}
 Summary:        Icculus.org Quake III Arena engine
 License:        GPLv2+
 URL:            http://ioquake3.org/
@@ -105,6 +105,9 @@ fi
 %{_datadir}/quake3
 
 %changelog
+* Fri Dec 04 2020 Simone Caronni <negativo17@gmail.com> - 1.36-38.20201117gitd1b7ab6
+- Update to latest snapshot.
+
 * Sun Jun 07 2020 Simone Caronni <negativo17@gmail.com> - 1.36-37.20200211gitf2c61c1
 - Update to latest snapshot.
 
